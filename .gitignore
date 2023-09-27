@@ -3,9 +3,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
 # C extensions
 *.so
-
+.idea
+*.db
+*.xlsx
 # Distribution / packaging
 .Python
 build/
