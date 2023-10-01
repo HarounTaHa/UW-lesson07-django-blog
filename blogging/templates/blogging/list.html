@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Recent Posts</h1>
-    {% for post in posts %}
+    {% for post in post_list %}
         <div class="post">
             <h2 href="{% url 'blog_detail' post.pk %}">{{ post }}</h2>
             <p class="byline">
