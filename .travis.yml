@@ -1,7 +1,7 @@
 languge: python
 
 python:
-  - "3.10"
+  - "3.10.2"
 install:
   - pip install -r requirements.txt
   - python manage.py makemigrations
