@@ -9,6 +9,7 @@ from django.template import loader
 
 # Create your views here.
 
+
 def stub_view(request, *args, **kwargs):
     body = "Stub View\n\n"
     if args:
@@ -21,11 +22,15 @@ def stub_view(request, *args, **kwargs):
 
 
 class BlogListView(ListView):
-    template_name = 'blogging/list.html'
-    queryset = Post.objects.exclude(published_date__exact=None).order_by('-published_date')
+    template_name = "blogging/list.html"
+    queryset = Post.objects.exclude(published_date__exact=None).order_by(
+        "-published_date"
+    )
 
 
 class BlogDetailView(DetailView):
     model = Post
-    template_name = 'blogging/detail.html'
-    queryset = Post.objects.exclude(published_date__exact=None).order_by('-published_date')
+    template_name = "blogging/detail.html"
+    queryset = Post.objects.exclude(published_date__exact=None).order_by(
+        "-published_date"
+    )

@@ -4,6 +4,7 @@ from .models import Post, Category
 
 # Register your models here.
 
+
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     exclude = ("posts",)
